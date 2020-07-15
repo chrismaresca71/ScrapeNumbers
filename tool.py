@@ -2,7 +2,8 @@ import urllib3 as lib
 from bs4 import BeautifulSoup
 
 http = lib.PoolManager()
-r = http.request('GET', 'http://py4e-data.dr-chuck.net/comments_728997.html')
+url = input("Enter URL: ")
+r = http.request('GET', url)
 
 lst = []
 if r.status == 200:
